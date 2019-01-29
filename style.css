@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+x
+#navbar{
+    display: flex;
+    flex-direction: column;
+    min-width:22vw;
+    position: fixed;
+    height: 95vh;
+    
+    
+    
+    
+}
+#main-doc{
+    width:75vw;
+   
+    margin-left: auto;
+    background:whitesmoke;
+    margin-top:15px;
+    margin-right: 10px;
+}
+#head{
+    color: pink;
+    margin-left: 12px;
+    font-size: 1.8em;
+    /* display: inline-block; */
+}
+#list{
+
+list-style: none;
+padding-left:2px;
+border:2px solid;
+margin-top:30px;
+background: whitesmoke;
+overflow-x:scroll;
+
+}
+.nav-links li {
+    border-bottom :2px solid;
+    font-size: 1.5em;
+    padding:15px 10px;
+    color:black;
+}

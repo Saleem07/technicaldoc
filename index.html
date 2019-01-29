@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Technical Documentation | python</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1 id="head"><i class="fab fa-python fa-2x"></i>Py Documentation</h1>
+      </header>
+      <ul id="list">
+        <a class="nav-links" href="#Introduction"
+          ><li class="list">Introduction</li></a
+        >
+        <a class="nav-links" href="#Python_interpreter"
+          ><li class="list">Python interpreter</li></a
+        >
+        <a class="nav-links" href="#Using_python_as_a_calculator"
+          ><li class="list">Using as a calculator</li></a
+        >
+        <a class="nav-links" href="#Strings"><li class="list">Strings</li></a>
+        <a class="nav-links" href="#Lists"><li class="list">Lists</li></a>
+        <a class="nav-links" href="#If_statements"
+          ><li class="list">If statements</li></a
+        >
+        <a class="nav-links" href="#For_statements" rel="internal"
+          ><li class="list">For statements</li></a
+        >
+        <a class="nav-links" href="#Defining_function" rel="internal"
+          ><li class="list">Defining functions</li></a
+        >
+        <a class="nav-links" href="#Data_structures"
+          ><li class="list">Data Structures</li></a
+        >
+        <a class="nav-links" href="#Reference"
+          ><li class="list">Reference</li></a
+        >
+      </ul>
+      <aside id="#aside"><h2>did you know</h2></aside>
+    </nav>
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header><h2>Introduction</h2></header>
+        <article>
+          <p>
+            Python is an interpreted, object-oriented programming language
+            similar to PERL, that has gained popularity because of its clear
+            syntax and readability. Python is said to be relatively easy to
+            learn and portable, meaning its statements can be interpreted in a
+            number of operating systems, including UNIX-based systems, Mac OS,
+            MS-DOS, OS/2, and various versions of Microsoft Windows 98. Python
+            was created by Guido van Rossum, a former resident of the
+            Netherlands, whose favorite comedy group at the time was Monty
+            Python's Flying Circus. The source code is freely available and open
+            for modification and reuse. Python has a significant number of
+            users.
+          </p>
+          <ul>
+            <li>
+              A notable feature of Python is its indenting of source statements
+              to make the code easier to read.
+            </li>
+            <li>
+              Python offers dynamic data type, ready-made class, and interfaces
+              to many system calls and libraries.
+            </li>
+            <li>It can be extended, using the C or C++ language.</li>
+          </ul>
+          <p>
+            This tutorial introduces the reader informally to the basic concepts
+            and features of the Python language and system
+          </p>
+        </article>
+      </section>
+      <section id="Python_interpreter" class="main-section">
+        <header><h2>Python interpreter</h2></header>
+        <article>
+          <p>
+            The Python interpreter is usually installed as
+            /usr/local/bin/python3.7 on those machines where it is available;
+            putting /usr/local/bin in your Unix shell’s search path makes it
+            possible to start it by typing the command:
+          </p>
+          <code> tag python3.7 </code>
+          <p>
+            On Windows machines, the Python installation is usually placed in
+            C:\Python37, though you can change this when you’re running the
+            installer. To add this directory to your path, you can type the
+            following command into the command prompt in a DOS box:
+          </p>
+          <code>tag set path=%path%;C:\python37</code>
+        </article>
+      </section>
+      <section id="Using_python_as_a_calculator" class="main-section">
+        <header><h2>Using python as a calculator</h2></header>
+        <article>
+          <p>
+            Let’s try some simple Python commands. Start the interpreter and
+            wait for the primary prompt, >>>. (It shouldn’t take long.)
+          </p>
+          <p>
+            The interpreter acts as a simple calculator: you can type an
+            expression at it and it will write the value. Expression syntax is
+            straightforward: the operators +, -, * and / work just like in most
+            other languages (for example, Pascal or C); parentheses (()) can be
+            used for grouping. For example:
+          </p>
+          <code
+            >>>> 2 + 2 <br />
+            4 <br />
+            >>> 50 - 5*6 <br />
+            20 <br />
+            >>> (50 - 5*6) / 4 <br />
+            5.0 <br />
+            >>> 8 / 5 # division always returns a floating point number <br />
+            1.6</code
+          >
+        </article>
+      </section>
+      <section id="Strings" class="main-section">
+        <header><h2>Strings</h2></header>
+        <article>
+          <p>
+            Besides numbers, Python can also manipulate strings, which can be
+            expressed in several ways. They can be enclosed in single quotes
+            ('...') or double quotes ("...") with the same result [2]. \ can be
+            used to escape quotes:
+          </p>
+          <code
+            >>>> 'spam eggs' # single quotes <br />
+            'spam eggs' <br />
+            >>> 'doesn\'t' # use \' to escape the single quote... <br />
+            "doesn't" <br />
+            >>> "doesn't" # ...or use double quotes instead <br />
+            "doesn't" <br />
+            >>> '"Yes," they said.' <br />
+            '"Yes," they said.' <br />
+            >>> "\"Yes,\" they said." <br />
+            '"Yes," they said.' <br />
+            >>> '"Isn\'t," they said.' <br />
+            '"Isn\'t," they said.'</code
+          >
+        </article>
+      </section>
+      <section id="Lists" class="main-section">
+        <header><h2>Lists</h2></header>
+        <article>
+          <p>
+            Python knows a number of compound data types, used to group together
+            other values. The most versatile is the list, which can be written
+            as a list of comma-separated values (items) between square brackets.
+            Lists might contain items of different types, but usually the items
+            all have the same type.
+          </p>
+          <code
+            >>>> squares = [1, 4, 9, 16, 25] <br />
+            >>> squares <br />
+            [1, 4, 9, 16, 25]</code
+          >
+        </article>
+      </section>
+      <section id="If_statements" class="main-section">
+        <header><h2>If Statements</h2></header>
+        <article>
+          <p>Perhaps the most well-known statement type is the if statement.</p>
+        </article>
+        <code
+          >>>> x = int(input("Please enter an integer: ")) <br />
+          Please enter an integer: 42 <br />
+          >>> if x < 0: <br />
+          ... x = 0 <br />
+          ... print('Negative changed to zero') <br />
+          ... elif x == 0: <br />
+          ... print('Zero') <br />
+          ... elif x == 1: <br />
+          ... print('Single') <br />
+          ... else: <br />
+          ... print('More') <br />
+          ...</code
+        >
+      </section>
+      <section id="For_statements" class="main-section">
+        <header><h2>For Statements</h2></header>
+        <article>
+          <p>
+            The for statement in Python differs a bit from what you may be used
+            to in C or Pascal. Rather than always iterating over an arithmetic
+            progression of numbers (like in Pascal), or giving the user the
+            ability to define both the iteration step and halting condition (as
+            C), Python’s for statement iterates over the items of any sequence
+            (a list or a string), in the order that they appear in the sequence.
+            For example (no pun intended):
+          </p>
+        </article>
+        <code
+          >>>> # Measure some strings: <br />
+          ... words = ['cat', 'window', 'defenestrate'] <br />
+          >>> for w in words: <br />
+          ... print(w, len(w)) <br />
+          ... <br />
+          cat 3 <br />
+          window 6 <br />
+          defenestrate 12</code
+        >
+      </section>
+      <section id="Defining_function" class="main-section">
+        <header><h2>Defining function</h2></header>
+        <article>
+          <p>
+            We can create a function that writes the Fibonacci series to an
+            arbitrary boundary:
+          </p>
+          <code
+            >>>> def fib(n): # write Fibonacci series up to n <br />
+            ... """Print a Fibonacci series up to n.""" <br />
+            ... a, b = 0, 1 <br />
+            ... while a < n: <br />
+            ... print(a, end=' ') <br />
+            ... a, b = b, a+b <br />
+            ... print() <br />
+            ... >>> # Now call the function we just defined: <br />
+            ... fib(2000) <br />
+            0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 <br />
+          </code>
+
+          <p>
+            The keyword def introduces a function definition. It must be
+            followed by the function name and the parenthesized list of formal
+            parameters. The statements that form the body of the function start
+            at the next line, and must be indented.
+          </p>
+        </article>
+      </section>
+      <section id="Data_structures" class="main-section">
+        <header><h2>Data Structures</h2></header>
+        <article>
+          <p>
+            This chapter describes some things you’ve learned about already in
+            more detail, and adds some new things as well. 5.1. More on Lists
+            The list data type has some more methods. Here are all of the
+            methods of list objects: <br />
+
+            <code>list.append(x)</code> <br />
+
+            Add an item to the end of the list. Equivalent to
+            <code>a[len(a):] = [x]</code> <br />
+
+            <code>list.extend(iterable)</code> <br />
+
+            Extend the list by appending all the items from the iterable.
+            Equivalent to <code>a[len(a):] = iterable</code> <br />
+
+            <code>list.insert(i, x)</code> <br />
+
+            Insert an item at a given position. The first argument is the index
+            of the element before which to insert, so
+            <code>a.insert(0, x)</code> inserts at the front of the list, and
+            <code>a.insert(len(a), x)</code> is equivalent to
+            <code>a.append(x)</code>.
+          </p>
+        </article>
+      </section>
+      <section id="Reference" class="main-section">
+        <header><h2>Reference</h2></header>
+        <p>
+          For in depth Documentation, go to the
+          <a
+            href="https://www.python.org/
+
+            "
+            target="_blank"
+            >official Python website</a
+          >.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
